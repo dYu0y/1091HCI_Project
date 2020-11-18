@@ -5,8 +5,19 @@
   <title></title>
   <meta charset="utf-8">
   <style>
-    html {
-      background: url(./thing_a\ \(Small\).png) no-repeat center center fixed;
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    .box {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    img {
+      max-width: 100%;  
     }
   </style>
   <!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -19,7 +30,9 @@
 </head>
 
 <body>
-
+  <div class='box'>
+    <img src="./thing_a (Small).png" alt="四角星">
+  </div>
   <script>
     // Your web app's Firebase configuration
     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
