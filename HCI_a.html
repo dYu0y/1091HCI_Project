@@ -4,55 +4,32 @@
 <head>
   <title></title>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
-    html, body {
+    html,
+    body {
       margin: 0;
       padding: 0;
       height: 100%;
     }
+
     .box {
       height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
     }
+
     img {
-      max-width: 100%;  
+      max-width: 100%;
     }
   </style>
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
-
-  <!-- TODO: Add SDKs for Firebase products that you want to use
-       https://firebase.google.com/docs/web/setup#available-libraries -->
-  <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-analytics.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-firestore.js"></script>
 </head>
 
 <body>
   <div class='box'>
     <img src="./thing_a (Small).png" alt="四角星">
   </div>
-  <script>
-    // Your web app's Firebase configuration
-    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-    var firebaseConfig = {
-      apiKey: "AIzaSyBu9kPgODPW2AlSzcrIfylOOzHfxZkKhWw",
-      authDomain: "hci-test-e04ea.firebaseapp.com",
-      databaseURL: "https://hci-test-e04ea.firebaseio.com",
-      projectId: "hci-test-e04ea",
-      storageBucket: "hci-test-e04ea.appspot.com",
-      messagingSenderId: "715817784666",
-      appId: "1:715817784666:web:fd19bd463d03a6fc28cf63",
-      measurementId: "G-EGE4LPGHY0"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    firebase.analytics();
-
-
-    var db = firebase.firestore();
-  </script>
 </body>
 
 </html>
