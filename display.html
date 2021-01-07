@@ -30,7 +30,7 @@
     body {
       padding: 0;
       margin: 0;
-      
+
     }
 
     p {
@@ -38,25 +38,19 @@
       font-size: 1.4em;
     }
 
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
     .parent {
-      height: 100vh;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      grid-column-gap: 0px;
-      grid-row-gap: 0px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
     .div1 {
-      grid-area: 1 / 1 / 2 / 2;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
-
-    .div2 {
-      grid-area: 2 / 1 / 3 / 2;
+      min-width: 330px;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -64,21 +58,46 @@
     }
 
     .div3 {
-      grid-area: 1 / 2 / 3 / 4;
+      width: 330px;
+      flex-grow: 1;
     }
+
+
+    @media (min-width: 576px) {}
+
+    @media (min-width: 768px) {
+      .parent {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+      }
+
+      .div3 {
+        flex-grow: 1;
+        width: calc(100vw - 330px);
+      }
+    }
+
+    @media (min-width: 992px) {}
+
+    @media (min-width: 1200px) {}
   </style>
 </head>
 
 <body>
   <div class="parent">
     <div class="div1">
-      <p>作品A</p>
-      <img src="./qrCode_A.png" alt="qrCode_A">
-    </div>
+      <div class="div1">
+        <p>作品A</p>
+        <img src="./qrCode_A.png" alt="qrCode_A">
+      </div>
 
-    <div class="div2">
-      <p>作品B</p>
-      <img src="./qrCode_B.png" alt="qrCode_B">
+      <div class="div1">
+        <p>作品B</p>
+        <img src="./qrCode_B.png" alt="qrCode_B">
+      </div>
     </div>
     <div class="div3"> <canvas id="bar" width=400 height=400></canvas> </div>
   </div>
