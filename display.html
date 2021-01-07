@@ -57,6 +57,15 @@
       flex-direction: column;
     }
 
+    
+    .div2 {
+      min-width: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    
     .div3 {
       width: 330px;
       flex-grow: 1;
@@ -72,6 +81,15 @@
         display: flex;
         justify-content: space-around;
         flex-wrap: nowrap;
+      }
+      
+      .div2 {
+        min-width: 300px;
+        max-height: calc(100vh / 3);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
       }
 
       .div3 {
@@ -89,16 +107,16 @@
 <body>
   <div class="parent">
     <div class="div1">
-      <div class="div1">
+      <div class="div2">
         <p>作品A</p>
         <img src="./qrCode_A.png" alt="qrCode_A">
       </div>
 
-      <div class="div1">
+      <div class="div2">
         <p>作品B</p>
         <img src="./qrCode_B.png" alt="qrCode_B">
       </div>
-      <div class="div1">
+      <div class="div2">
         <p>作品C</p>
         <img src="./qrCode_C.png" alt="qrCode_C">
       </div>
